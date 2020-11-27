@@ -1,0 +1,12 @@
+"c:\Program Files\qemu\qemu-system-arm.exe" ^
+-kernel kernel-qemu-4.19.50-buster ^
+-cpu arm1176 ^
+-m 256 ^
+-M versatilepb ^
+-dtb versatile-pb-buster-5.4.51.dtb ^
+-serial stdio ^
+-append "root=/dev/sda2 rootfstype=ext4 rw" ^
+-hda 2020-08-20-raspios-buster-armhf.img ^
+-net nic ^
+-net user,hostfwd=tcp::5022-:22 ^
+-no-reboot
