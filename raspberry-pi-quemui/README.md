@@ -1,5 +1,7 @@
 # Run Raspberry Pi image (compiled for ARM) in Windows
 
+![Raspberry Pi in QEMU for Windows](docs/rpi-qemu-screenshot.png)
+
 Install QEMU (e.g. qemu-w64-setup-20200814.exe ) from https://qemu.weilnetz.de/w64/2020/.
 
 Download kernel-qemu-4.19.50-buster and versatile-pb-buster-5.4.51.dtb from https://github.com/dhruvvyas90/qemu-rpi-kernel.
