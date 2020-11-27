@@ -50,7 +50,8 @@ Install QEMU from Terminal ```brew install qemu```
 You might also need to install Xcode command line tools: ```xcode-select --install```
 
 In the same folder as the files above, chreate a file called run_rpi.sh and paste in the following content:
-````
+
+```
 export RPI_KERNEL=kernel-qemu-4.19.50-buster
 export DTB_FILE=versatile-pb-buster-5.4.51.dtb
 export OS_IMAGE=2020-02-13-raspbian-buster.img
