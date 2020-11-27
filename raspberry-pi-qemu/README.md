@@ -43,6 +43,11 @@ Run the run_rpi.bat
 
 # Run Raspberry Pi image in macOS
 
+These steps has been tested using:
+
+- QEMU emulator version 5.1.0
+- macOS Catalina v10.15.7
+
 Install brew package manager ```/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"```
 
 Install QEMU from Terminal ```brew install qemu```
