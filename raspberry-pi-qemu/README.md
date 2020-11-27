@@ -24,7 +24,8 @@ from http://downloads.raspberrypi.org/raspios_armhf/images/.
 Download and install QEMU (e.g. qemu-w64-setup-20200814.exe ) from https://qemu.weilnetz.de/w64/2020/.
 
 In the same folder as the files above, chreate a file called run_rpi.bat and paste in the following content:
-```
+
+```shell
 "c:\Program Files\qemu\qemu-system-arm.exe" ^
 -kernel kernel-qemu-4.19.51-buster ^
 -cpu arm1176 ^
@@ -56,7 +57,7 @@ You might also need to install Xcode command line tools: ```xcode-select --insta
 
 In the same folder as the files above, chreate a file called run_rpi.sh and paste in the following content:
 
-```
+```shell
 export RPI_KERNEL=kernel-qemu-4.19.50-buster
 export DTB_FILE=versatile-pb-buster-5.4.51.dtb
 export OS_IMAGE=2020-02-13-raspbian-buster.img
@@ -74,6 +75,21 @@ qemu-system-arm \
 -net user,hostfwd=tcp::5022-:22 \
 -no-reboot
 ```
+
+## Run Raspberry Pi image in Docker
+
+Yes, you can also run the image from Docker.
+
+Download and install [Docker for Windows](https://hub.docker.com/editions/community/docker-ce-desktop-windows/), [Docker for macOS](https://hub.docker.com/editions/community/docker-ce-desktop-mac/) or [Docker for Linux](https://docs.docker.com/engine/install/ubuntu/).
+
+Then start the default dockerpi container by typing:
+
+```shell
+docker run -it lukechilds/dockerpi
+
+```
+
+If you want to mount local directories or load your own RPi OS image then go to [lukechilds page](https://github.com/lukechilds/dockerpi).
 
 Best regards,
 Mikael Johansson
